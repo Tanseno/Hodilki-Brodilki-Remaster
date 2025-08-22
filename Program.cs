@@ -4,11 +4,12 @@ namespace Hodilki_brodilki
 {
     public class Game
     {
-        public static int[] Player_pos = new int[] { 9, 14 };
         public static int Balance = 0;
+        public static Player Plr = new Player(new int[] { 9, 9 }, "@");
         public static void Main()
         {
             Random rndm = new Random();
+            
 
 
             string Player = "@";
@@ -35,7 +36,7 @@ namespace Hodilki_brodilki
             {".", ".", ".", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■"},
             {".", ".", ".", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■"},
             };
-            Map[Player_pos[1], Player_pos[0]] = Player;
+            Map[Plr.Get_Pos_X(), Plr.Get_Pos_Y()] = Player;
             while (Game_Working)
             {
                 String? word = Console.ReadLine();
@@ -43,17 +44,17 @@ namespace Hodilki_brodilki
                 word = word.Trim();
                 if (word.Length == 1)
                 {
-                    Map[Player_pos[1], Player_pos[0]] = ".";
+                    Map[Plr.Get_Pos_X(), Plr.Get_Pos_Y()] = ".";
                     switch (word)
                     {
                         case "w":
                             if (Check_Ahead(Map) == ".")
                             {
-                                Player_pos[1] -= 1;
+                                Plr.Go_Ahead();
                             }
                             else if (Check_Back(Map) == "$")
                             {
-                                Player_pos[1] -= 1;
+                                Plr.Go_Ahead();
                                 Balance += 1;
                             }
                             break;
@@ -63,11 +64,11 @@ namespace Hodilki_brodilki
                         case "s":
                             if (Check_Back(Map) == ".")
                             {
-                                Player_pos[1] += 1;
+                                Plr.Go_Back();
                             }
                             else if (Check_Back(Map) == "$")
                             {
-                                Player_pos[1] += 1;
+                                Plr.Go_Back();
                                 Balance += 1;
                             }
                             break;
@@ -76,11 +77,11 @@ namespace Hodilki_brodilki
                         case "d":
                             if (Check_Right(Map) == ".")
                             {
-                                Player_pos[0] += 1;
+                                Plr.Go_Right();
                             }
                             else if (Check_Back(Map) == "$")
                             {
-                                Player_pos[0] += 1;
+                                Plr.Go_Right();
                                 Balance += 1;
                             }
                             break;
@@ -89,11 +90,11 @@ namespace Hodilki_brodilki
                         case "a":
                             if (Check_Left(Map) == ".")
                             {
-                                Player_pos[0] -= 1;
+                                Plr.Go_Left();
                             }
                             else if (Check_Back(Map) == "$")
                             {
-                                Player_pos[0] -= 1;
+                                Plr.Go_Left();
                                 Balance += 1;
                             }
                             break;
@@ -102,7 +103,7 @@ namespace Hodilki_brodilki
                         case "e":
                             break;
                     }
-                    Map[Player_pos[1], Player_pos[0]] = Player;
+                    Map[Plr.Get_Pos_X(), Plr.Get_Pos_Y()] = Player;
                     Draw_Map(Map);
                 }
             }
@@ -111,22 +112,22 @@ namespace Hodilki_brodilki
 
         public static string Check_Left(string[,] Map)
         {
-            string Square = Map[Player_pos[1], Player_pos[0] - 1];
+            string Square = Map[Plr.Get_Pos_X(), Plr.Get_Pos_Y() - 1];
             return Square;
         }
         public static string Check_Right(string[,] Map)
         {
-            string Square = Map[Player_pos[1], Player_pos[0] + 1];
+            string Square = Map[Plr.Get_Pos_X(), Plr.Get_Pos_Y() + 1];
             return Square;
         }
         public static string Check_Ahead(string[,] Map)
         {
-            string Square = Map[Player_pos[1] - 1, Player_pos[0]];
+            string Square = Map[Plr.Get_Pos_X() - 1, Plr.Get_Pos_Y()];
             return Square;
         }
         public static string Check_Back(string[,] Map)
         {
-            string Square = Map[Player_pos[1] + 1, Player_pos[0]];
+            string Square = Map[Plr.Get_Pos_X() + 1, Plr.Get_Pos_Y()];
             return Square;
         }
         
