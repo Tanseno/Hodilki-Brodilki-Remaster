@@ -8,48 +8,72 @@ namespace Hodilki_brodilki
 {
     public class Player
     {
-        private int[] Pos = new int[] { 9, 14 };
-        private string Skin = "@";
+        private static int[] Pos = new int[] { 9, 14 };
+        private static string Skin = "@";
+        private static int Balance = 0;
 
-        public Player(int[] Pos, string Skin)
-        {
-            this.Pos = Pos;
-            this.Skin = Skin;
-        }
-        public Player(string Skin)
-        {
-            this.Skin = Skin;
-        }
-        public Player(int[] Pos)
-        {
-            this.Pos = Pos;
-        }
-        public Player(){}
+        //public Player(int[] Pos, string Skin)
+        //{
+        //    this.Pos = Pos;
+        //    this.Skin = Skin;
+        //}
+        //public Player(string Skin)
+        //{
+        //    this.Skin = Skin;
+        //}
+        //public Player(int[] Pos)
+        //{
+        //    this.Pos = Pos;
+        //}
+        //public Player(){}
 
+        public static void Switch_Pos(int[] Pos1, string Skin1)
+        {
+            Pos = Pos1;
+        }
+        public static void Switch_Skin(string Skin1)
+        {
+            Skin = Skin1;
+        }
 
-        public void Go_Left()
+        public static void Go_Left()
         {
             Pos[0] -= 1;
         }
-        public void Go_Right()
+        public static void Go_Right()
         {
             Pos[0] += 1;
         }
-        public void Go_Ahead()
+        public static void Go_Ahead()
         {
             Pos[1] -= 1;
         }
-        public void Go_Back()
+        public static void Go_Back()
         {
             Pos[1] += 1;
         }
-        public int Get_Pos_Y()
+
+
+        public static int Get_Pos_Y()
         {
             return Pos[0];
         }
-        public int Get_Pos_X()
+        public static int Get_Pos_X()
         {
             return Pos[1];
+        }
+        public static int[] Get_Pos()
+        {
+            return Pos;
+        }
+        public static string Get_Skin()
+        {
+            return Skin;
+        }
+
+        public static void New_Coin()
+        {
+            Balance++;
         }
     }
 }

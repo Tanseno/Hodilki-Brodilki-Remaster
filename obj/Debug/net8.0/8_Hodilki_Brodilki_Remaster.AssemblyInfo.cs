@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("8_Hodilki_Brodilki_Remaster")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16c6671e46ee579e903c010bd69780f2ec814460")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+faaed10e55457f39d6f2367072fa3f96d730eb0d")]
 [assembly: System.Reflection.AssemblyProductAttribute("8_Hodilki_Brodilki_Remaster")]
 [assembly: System.Reflection.AssemblyTitleAttribute("8_Hodilki_Brodilki_Remaster")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

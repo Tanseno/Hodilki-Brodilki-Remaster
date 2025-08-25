@@ -1,14 +1,17 @@
-﻿using System;
+﻿using Hodilki_brodilki;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _8_Hodilki_Brodilki_Remaster
+namespace Hodilki_brodilki
 {
     public class Map
     {
-        private string[,] Level = {                                                                                                 // карта (Level)                          
+        private static int[] Pos = new int[] { 9, 14 };
+
+        private static string[,] Level = {                                                                                                 // карта (Level)                          
             {".", ".", ".", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■"},
             {".", ".", ".", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■"},
             {".", ".", ".", "■", "■", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "■", "■"},
@@ -30,8 +33,98 @@ namespace _8_Hodilki_Brodilki_Remaster
             {".", ".", ".", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■", "■"},
             };
 
+        public static void Pos_On_Map()
+        {
+            Pos = Player.Get_Pos();
+        }
 
-        public void Draw_Level()
+        public static void Message(string Word)
+        {
+            Level[Player.Get_Pos_X(), Player.Get_Pos_Y()] = ".";
+            switch (Word)
+            {
+                case "w":
+                    if (Check_Ahead(Level) == ".")
+                    {
+                        Player.Go_Ahead();
+                    }
+                    else if (Check_Back(Level) == "$")
+                    {
+                        Player.Go_Ahead();
+                        Player.New_Coin();
+                    }
+                    break;
+
+
+
+                case "s":
+                    if (Check_Back(Level) == ".")
+                    {
+                        Player.Go_Back();
+                    }
+                    else if (Check_Back(Level) == "$")
+                    {
+                        Player.Go_Back();
+                        Player.New_Coin();
+                    }
+                    break;
+
+
+                case "d":
+                    if (Check_Right(Level) == ".")
+                    {
+                        Player.Go_Right();
+                    }
+                    else if (Check_Back(Level) == "$")
+                    {
+                        Player.Go_Right();
+                        Player.New_Coin();
+                    }
+                    break;
+
+
+                case "a":
+                    if (Check_Left(Level) == ".")
+                    {
+                        Player.Go_Left();
+                    }
+                    else if (Check_Back(Level) == "$")
+                    {
+                        Player.Go_Left();
+                        Player.New_Coin();
+                    }
+                    break;
+
+
+                case "e":
+                    break;
+            }
+            Level[Player.Get_Pos_X(), Player.Get_Pos_Y()] = Player.Get_Skin();
+        }
+
+        public static string Check_Left(string[,] Level)
+        {
+            string Square = Level[Player.Get_Pos_X(), Player.Get_Pos_Y() - 1];
+            return Square;
+        }
+        public static string Check_Right(string[,] Level)
+        {
+            string Square = Level[Player.Get_Pos_X(), Player.Get_Pos_Y() + 1];
+            return Square;
+        }
+        public static string Check_Ahead(string[,] Level)
+        {
+            string Square = Level[Player.Get_Pos_X() - 1, Player.Get_Pos_Y()];
+            return Square;
+        }
+        public static string Check_Back(string[,] Level)
+        {
+            string Square = Level[Player.Get_Pos_X() + 1, Player.Get_Pos_Y()];
+            return Square;
+        }
+
+
+        public static void Draw_Level()
         {
             System.Console.WriteLine("");
             System.Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13} {14}", Level[2, 5], Level[2, 6], Level[2, 7], Level[2, 8], Level[2, 9], Level[2, 10], Level[2, 11], Level[2, 12], Level[2, 13], Level[2, 14], Level[2, 15], Level[2, 16], Level[2, 17], Level[2, 18], Level[2, 19]);
