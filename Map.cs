@@ -48,7 +48,7 @@ namespace Hodilki_brodilki
                     {
                         Player.Go_Ahead();
                     }
-                    else if (Check_Back(Level) == "$")
+                    else if (Check_Ahead(Level) == "$")
                     {
                         Player.Go_Ahead();
                         Player.New_Coin();
@@ -75,7 +75,7 @@ namespace Hodilki_brodilki
                     {
                         Player.Go_Right();
                     }
-                    else if (Check_Back(Level) == "$")
+                    else if (Check_Right(Level) == "$")
                     {
                         Player.Go_Right();
                         Player.New_Coin();
@@ -88,7 +88,7 @@ namespace Hodilki_brodilki
                     {
                         Player.Go_Left();
                     }
-                    else if (Check_Back(Level) == "$")
+                    else if (Check_Left(Level) == "$")
                     {
                         Player.Go_Left();
                         Player.New_Coin();
@@ -97,6 +97,10 @@ namespace Hodilki_brodilki
 
 
                 case "e":
+                    break;
+
+
+                case "":
                     break;
             }
             Level[Player.Get_Pos_X(), Player.Get_Pos_Y()] = Player.Get_Skin();
@@ -123,6 +127,41 @@ namespace Hodilki_brodilki
             return Square;
         }
 
+        public static void Load_Level(string Name_File_Txt)
+        {
+            using (StreamReader text = new StreamReader(Name_File_Txt))
+            {
+                int i = 0;
+                string line = text.ReadToEnd();
+                string[] info = line.Split('\n');
+
+                string[] Pos_On_The_Load_Map = info[15].Split(' ');
+                int X_Player = Convert.ToInt32(Pos_On_The_Load_Map[0]);
+                int Y_Player = Convert.ToInt32(Pos_On_The_Load_Map[1]);
+                Player.Switch_Pos(new int[] { Y_Player, X_Player });
+                Pos = new int[] { Y_Player, X_Player };
+                
+                string Player_Skin = info[16];
+                Player.Switch_Skin(Convert.ToString(Player_Skin[0]));
+                for (int y = 2; y <= 16; y++)
+                {
+                    for (int x = 5; x <= 19; x++)
+                    {
+                        if (line[i] != '\n' && line[i] != ' ')
+                        {
+                            Level[y, x] = Convert.ToString(line[i]);
+                        }
+                        else
+                        {
+                            x = 4;
+                        }
+                        i++;
+                    }
+                }
+                Level[Y_Player, X_Player] = "@";
+                Draw_Level();
+            }
+        }
 
         public static void Draw_Level()
         {
@@ -142,7 +181,7 @@ namespace Hodilki_brodilki
             System.Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13} {14}", Level[14, 5], Level[14, 6], Level[14, 7], Level[14, 8], Level[14, 9], Level[14, 10], Level[14, 11], Level[14, 12], Level[14, 13], Level[14, 14], Level[14, 15], Level[14, 16], Level[14, 17], Level[14, 18], Level[14, 19]);
             System.Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13} {14}", Level[15, 5], Level[15, 6], Level[15, 7], Level[15, 8], Level[15, 9], Level[15, 10], Level[15, 11], Level[15, 12], Level[15, 13], Level[15, 14], Level[15, 15], Level[15, 16], Level[15, 17], Level[15, 18], Level[15, 19]);
             System.Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13} {14}", Level[16, 5], Level[16, 6], Level[16, 7], Level[16, 8], Level[16, 9], Level[16, 10], Level[16, 11], Level[16, 12], Level[16, 13], Level[16, 14], Level[16, 15], Level[16, 16], Level[16, 17], Level[16, 18], Level[16, 19]);
-
+            System.Console.WriteLine("");
         }
     }
 }

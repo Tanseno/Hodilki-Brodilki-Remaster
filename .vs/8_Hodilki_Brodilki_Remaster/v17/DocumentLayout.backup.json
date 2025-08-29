@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{35BA36DA-9A3D-E9B8-9875-4F0FDA0C8E7C}|8_Hodilki_Brodilki_Remaster.csproj|solutionrelative:map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{35BA36DA-9A3D-E9B8-9875-4F0FDA0C8E7C}|8_Hodilki_Brodilki_Remaster.csproj|c:\\users\\maksim\\source\\repos\\hodilki_brodilki\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35BA36DA-9A3D-E9B8-9875-4F0FDA0C8E7C}|8_Hodilki_Brodilki_Remaster.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{35BA36DA-9A3D-E9B8-9875-4F0FDA0C8E7C}|8_Hodilki_Brodilki_Remaster.csproj|c:\\users\\maksim\\source\\repos\\hodilki_brodilki\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35BA36DA-9A3D-E9B8-9875-4F0FDA0C8E7C}|8_Hodilki_Brodilki_Remaster.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35BA36DA-9A3D-E9B8-9875-4F0FDA0C8E7C}|8_Hodilki_Brodilki_Remaster.csproj|c:\\users\\maksim\\source\\repos\\hodilki_brodilki\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35BA36DA-9A3D-E9B8-9875-4F0FDA0C8E7C}|8_Hodilki_Brodilki_Remaster.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35BA36DA-9A3D-E9B8-9875-4F0FDA0C8E7C}|8_Hodilki_Brodilki_Remaster.csproj|c:\\users\\maksim\\source\\repos\\hodilki_brodilki\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35BA36DA-9A3D-E9B8-9875-4F0FDA0C8E7C}|8_Hodilki_Brodilki_Remaster.csproj|solutionrelative:commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{35BA36DA-9A3D-E9B8-9875-4F0FDA0C8E7C}|8_Hodilki_Brodilki_Remaster.csproj|c:\\users\\maksim\\source\\repos\\hodilki_brodilki\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,24 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Maksim\\source\\repos\\Hodilki_Brodilki\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Maksim\\source\\repos\\Hodilki_Brodilki\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T19:26:42.055Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -53,27 +44,50 @@
               "RelativeDocumentMoniker": "Map.cs",
               "ToolTip": "C:\\Users\\Maksim\\source\\repos\\Hodilki_Brodilki\\Map.cs",
               "RelativeToolTip": "Map.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAqwJAAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T11:45:36.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\Maksim\\source\\repos\\Hodilki_Brodilki\\Player.cs",
-              "RelativeDocumentMoniker": "Player.cs",
-              "ToolTip": "C:\\Users\\Maksim\\source\\repos\\Hodilki_Brodilki\\Player.cs",
-              "RelativeToolTip": "Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T19:29:26.193Z",
+              "WhenOpened": "2025-08-28T14:07:25.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Commands.cs",
+              "DocumentMoniker": "C:\\Users\\Maksim\\source\\repos\\Hodilki_Brodilki\\Commands.cs",
+              "RelativeDocumentMoniker": "Commands.cs",
+              "ToolTip": "C:\\Users\\Maksim\\source\\repos\\Hodilki_Brodilki\\Commands.cs",
+              "RelativeToolTip": "Commands.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T13:48:20.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Maksim\\source\\repos\\Hodilki_Brodilki\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Maksim\\source\\repos\\Hodilki_Brodilki\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T19:26:42.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\Maksim\\source\\repos\\Hodilki_Brodilki\\Player.cs",
+              "RelativeDocumentMoniker": "Player.cs",
+              "ToolTip": "C:\\Users\\Maksim\\source\\repos\\Hodilki_Brodilki\\Player.cs",
+              "RelativeToolTip": "Player.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAUwBsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T19:29:26.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Maksim\\source\\repos\\Hodilki_Brodilki\\User.cs",
               "RelativeDocumentMoniker": "User.cs",

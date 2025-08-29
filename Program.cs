@@ -12,14 +12,18 @@ namespace Hodilki_brodilki
 
             while (Game_Working)
             {
-                String? word = Console.ReadLine();
-                word = word.ToLower();
-                word = word.Trim();
+                String? Line = Console.ReadLine();
+                Line = Line.ToLower();
+                Line = Line.Trim();
 
-                if (word.Length == 1)
+                if (Line.Length == 1)
                 {
-                    Map.Message(word);
+                    Map.Message(Line);
                     Map.Draw_Level();
+                }
+                else
+                {
+                    Commands.Analysis(Line);
                 }
             }
         }

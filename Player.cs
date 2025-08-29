@@ -27,7 +27,7 @@ namespace Hodilki_brodilki
         //}
         //public Player(){}
 
-        public static void Switch_Pos(int[] Pos1, string Skin1)
+        public static void Switch_Pos(int[] Pos1)
         {
             Pos = Pos1;
         }
