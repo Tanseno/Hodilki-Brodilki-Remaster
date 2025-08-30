@@ -8,7 +8,7 @@ namespace Hodilki_brodilki
 {
     public class Player
     {
-        private static int[] Pos = new int[] { 9, 14 };
+        private static int[] Pos = new int[] { 0, 0 };
         private static string Skin = "@";
         private static int Balance = 0;
 

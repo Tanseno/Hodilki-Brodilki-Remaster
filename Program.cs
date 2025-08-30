@@ -10,21 +10,15 @@ namespace Hodilki_brodilki
             
             bool Game_Working = true;
 
+            Map.Draw_Level();
+
             while (Game_Working)
             {
                 String? Line = Console.ReadLine();
                 Line = Line.ToLower();
                 Line = Line.Trim();
-
-                if (Line.Length == 1)
-                {
-                    Map.Message(Line);
-                    Map.Draw_Level();
-                }
-                else
-                {
-                    Commands.Analysis(Line);
-                }
+                Commands.Analysis(Line);
+                
             }
         }
     }
