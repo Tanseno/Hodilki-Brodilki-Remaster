@@ -18,7 +18,6 @@ namespace Hodilki_brodilki
                 Line = Line.ToLower();
                 Line = Line.Trim();
                 Commands.Analysis(Line);
-                
             }
         }
     }

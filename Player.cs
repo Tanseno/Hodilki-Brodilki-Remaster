@@ -12,21 +12,6 @@ namespace Hodilki_brodilki
         private static string Skin = "@";
         private static int Balance = 0;
 
-        //public Player(int[] Pos, string Skin)
-        //{
-        //    this.Pos = Pos;
-        //    this.Skin = Skin;
-        //}
-        //public Player(string Skin)
-        //{
-        //    this.Skin = Skin;
-        //}
-        //public Player(int[] Pos)
-        //{
-        //    this.Pos = Pos;
-        //}
-        //public Player(){}
-
         public static void Switch_Pos(int[] Pos1)
         {
             Pos = Pos1;
@@ -74,6 +59,10 @@ namespace Hodilki_brodilki
         public static void New_Coin()
         {
             Balance++;
+        }
+        public static int Get_Balance()
+        {
+            return Balance;
         }
     }
 }

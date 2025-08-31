@@ -39,6 +39,10 @@ namespace Hodilki_brodilki
                             Player.Go_Ahead();
                             Player.New_Coin();
                         }
+                        // else if (Map.Check_Ahead() == "#")
+                        // {
+                            
+                        // }
                     }
                     catch (Exception) { }
                     break;
@@ -125,8 +129,7 @@ namespace Hodilki_brodilki
             switch (Words[0])
             {
                 case "!load":
-                    // Map.Load_Level(Words[1]);
-                    System.Console.WriteLine("Не работает");
+                    Map.Load_Level(Words[1]);
                     break;
 
 
