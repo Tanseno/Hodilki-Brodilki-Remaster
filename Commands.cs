@@ -30,19 +30,22 @@ namespace Hodilki_brodilki
                 case "w":
                     try
                     {
-                        if (Map.Check_Ahead() == ".")
+                        if (Map.Check_Ahead(false) == ".")
                         {
                             Player.Go_Ahead();
                         }
-                        else if (Map.Check_Ahead() == "$")
+                        else if (Map.Check_Ahead(false) == "$")
                         {
                             Player.Go_Ahead();
                             Player.New_Coin();
                         }
-                        // else if (Map.Check_Ahead() == "#")
-                        // {
-                            
-                        // }
+                        else if (Map.Check_Ahead(false) == "#")
+                        {
+                            if (Map.Check_Ahead(true) == ".")
+                            {
+                                
+                            }
+                        }
                     }
                     catch (Exception) { }
                     break;
@@ -52,11 +55,11 @@ namespace Hodilki_brodilki
                 case "s":
                     try
                     {
-                        if (Map.Check_Back() == ".")
+                        if (Map.Check_Back(false) == ".")
                         {
                             Player.Go_Back();
                         }
-                        else if (Map.Check_Back() == "$")
+                        else if (Map.Check_Back(false) == "$")
                         {
                             Player.Go_Back();
                             Player.New_Coin();
@@ -70,11 +73,11 @@ namespace Hodilki_brodilki
                 case "d":
                     try
                     {
-                        if (Map.Check_Right() == ".")
+                        if (Map.Check_Right(false) == ".")
                         {
                             Player.Go_Right();
                         }
-                        else if (Map.Check_Right() == "$")
+                        else if (Map.Check_Right(false) == "$")
                         {
                             Player.Go_Right();
                             Player.New_Coin();
@@ -88,11 +91,11 @@ namespace Hodilki_brodilki
                 case "a":
                     try
                     {
-                        if (Map.Check_Left() == ".")
+                        if (Map.Check_Left(false) == ".")
                         {
                             Player.Go_Left();
                         }
-                        else if (Map.Check_Left() == "$")
+                        else if (Map.Check_Left(false) == "$")
                         {
                             Player.Go_Left();
                             Player.New_Coin();

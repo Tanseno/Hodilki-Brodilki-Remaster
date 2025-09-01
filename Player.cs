@@ -38,6 +38,23 @@ namespace Hodilki_brodilki
             Pos[1] += 1;
         }
 
+        public static void Go_Left_With_Box()
+        {
+            Pos[0] -= 1;
+        }
+        public static void Go_Right_With_Box()
+        {
+            Pos[0] += 1;
+        }
+        public static void Go_Ahead_With_Box()
+        {
+            Pos[1] -= 1;
+        }
+        public static void Go_Back_With_Box()
+        {
+            Pos[1] += 1;
+        }
+
 
         public static int Get_Pos_Y()
         {

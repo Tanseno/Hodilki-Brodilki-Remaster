@@ -27,25 +27,63 @@ namespace Hodilki_brodilki
             { ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "."},
             };
 
-        public static string Check_Left()
+        public static string Check_Left(bool With_Box)
         {
-            string Square = Level[Player.Get_Pos_X(), Player.Get_Pos_Y() - 1];
-            return Square;
+            string Square;
+            if (With_Box == false)
+            {
+                Square = Level[Player.Get_Pos_X(), Player.Get_Pos_Y() - 1];
+                return Square;
+            }
+            else
+            {
+                Square = Level[Player.Get_Pos_X(), Player.Get_Pos_Y() - 2];
+                return Square;
+            }
+            
         }
-        public static string Check_Right()
+        public static string Check_Right(bool With_Box)
         {
-            string Square = Level[Player.Get_Pos_X(), Player.Get_Pos_Y() + 1];
-            return Square;
+            string Square;
+            if (With_Box == true)
+            {
+                Square = Level[Player.Get_Pos_X(), Player.Get_Pos_Y() + 1];
+                return Square;
+            }
+            else
+            {
+                Square = Level[Player.Get_Pos_X(), Player.Get_Pos_Y() + 2];
+                return Square;
+            }
+            
         }
-        public static string Check_Ahead()
+        public static string Check_Ahead(bool With_Box)
         {
-            string Square = Level[Player.Get_Pos_X() - 1, Player.Get_Pos_Y()];
-            return Square;
+            string Square;
+            if (With_Box == true)
+            {
+                Square = Level[Player.Get_Pos_X() - 1, Player.Get_Pos_Y()];
+                return Square;
+            }
+            else
+            {
+                Square = Level[Player.Get_Pos_X() - 2, Player.Get_Pos_Y()];
+                return Square;
+            }
         }
-        public static string Check_Back()
+        public static string Check_Back(bool With_Box)
         {
-            string Square = Level[Player.Get_Pos_X() + 1, Player.Get_Pos_Y()];
-            return Square;
+            string Square;
+            if (With_Box)
+            {
+                Square = Level[Player.Get_Pos_X() + 1, Player.Get_Pos_Y()];
+                return Square;
+            }
+            else
+            {
+                Square = Level[Player.Get_Pos_X() + 2, Player.Get_Pos_Y()];
+                return Square;
+            }  
         }
 
 
